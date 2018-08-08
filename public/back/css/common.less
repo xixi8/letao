@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 .body_bg {
   background-color: #222D32;
 }
@@ -8,6 +13,68 @@
   font-size: 20px;
 }
 
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
 .mt_150 {
   margin-top: 150px;
 }
+
+/*左侧侧边栏布局*/
+.lt_aside {
+  width: 180px;
+  height: 100%;
+  background-color: #222D32;
+  position: fixed;
+  top: 0;
+  left: 0;
+  .brand {
+    width: 180px;
+    height: 50px;
+    background-color: #367FA9;
+    text-align: center;
+    a {
+      color: #fff;
+      font-size: 20px;
+      line-height: 50px;
+    }
+  }
+  .user {
+    padding-top: 30px;
+    text-align: center;
+    height: 180px;
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+    p {
+      height: 40px;
+      color: #fff;
+      line-height: 40px;
+      font-size: 18px;
+    }
+  }
+  .nav {
+    ul {
+      a {
+        height: 40px;
+        line-height: 40px;
+        color: #fff;
+        // font-size: 16px;
+        padding-left: 40px;
+        border-left: 3px solid transparent;
+      }
+      .child {
+        a {
+          padding-left: 60px;
+        }
+      }
+    }
+  }
+} 

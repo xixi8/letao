@@ -12,7 +12,53 @@
 </head>
 <body>
 
-  <div>首页</div>
+  <!-- 左侧侧边栏布局 -->
+  <div class="lt_aside">
+    <!-- 大标题 -->
+    <div class="brand">
+      <a href="#">乐淘项目</a>
+    </div>
+    <!-- 用户 -->
+    <div class="user">
+      <img src="./images/hh.jpg" alt="">
+      <p>超级管理员</p>
+    </div>
+    <!-- 导航 -->
+    <div class="nav">
+      <ul>
+        <li>
+          <a href="#">
+            <i class="glyphicon glyphicon-user"></i>
+            <span>用户管理</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;"><i class="glyphicon glyphicon-list"></i>
+            <span>分类管理</span></a>
+          <div class="child">
+            <a href="#">一级分类</a>
+            <a href="#">二级分类</a>
+          </div>
+        </li>
+        <li><a href="#"><i class="glyphicon glyphicon-tags"></i>
+          <span>商品管理</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 右侧布局 -->
+  <div class="lt_main">
+    <!-- 上面的 topbar -->
+    <div class="lt_topbar">
+      <a href="#" class="pull-left icon_menu"><i class="glyphicon glyphicon-align-justify"></i></a>
+      <a href="#" class="pull-right icon_logout"><i class="glyphicon glyphicon-log-out"></i></a>
+    </div>
+    <!-- .container-fluid  布局容器,用于100%宽度,占据全部视口的容器,默认两侧有15px的padding值(bootstrap) -->
+    <div class="container-fluid">
+      <!-- 面包屑导航, 路径导航 -->
+      
+    </div>
+  </div>
 
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
