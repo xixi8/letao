@@ -3,6 +3,9 @@
   padding: 0;
   list-style: none;
 }
+.red {
+  color: #A94442;
+}
 .body_bg {
   background-color: #222D32;
 }
@@ -24,6 +27,9 @@ a:active {
 .mt_150 {
   margin-top: 150px;
 }
+.mt_20 {
+  margin-top: 20px;
+}
 
 /*左侧侧边栏布局*/
 .lt_aside {
@@ -33,6 +39,8 @@ a:active {
   position: fixed;
   top: 0;
   left: 0;
+  transition: all 1s;
+  z-index: 999;
   .brand {
     width: 180px;
     height: 50px;
@@ -77,4 +85,50 @@ a:active {
       }
     }
   }
+  &.hiddenmenu {
+    left: -180px;
+  }
 } 
+
+/*右侧布局*/
+.lt_main {
+  padding-left: 180px;
+  padding-top: 50px;
+  height: 2000px;
+  transition: all 1s;
+  &.hiddenmenu {
+    padding-left: 0;
+  }
+  .lt_topbar {
+    height: 50px;
+    background-color: #3C8DBC;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-left: 180px;
+    transition: all 1s;
+    a {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 18px;
+      color: #fff;
+    }
+    &.hiddenmenu {
+      padding-left: 0;
+    }
+  }
+
+  /*图表*/ 
+  .lt_content {
+    .echarts_1,
+    .echarts_2 {
+      width: 48%;
+      height: 400px;
+    }
+  }
+
+  
+}

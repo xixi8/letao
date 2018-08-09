@@ -29,7 +29,7 @@ if (location.href.indexOf("login.html") === -1){
   })
 }
 
-$(function (){
+
   //进度条
   
   //jQuery中 ajax 的全局事件
@@ -43,7 +43,7 @@ $(function (){
   //在发送第一个ajax请求时, ajaxStart , 开启进度条
   $(document).ajaxStart(function (){
     NProgress.start();
-  })
+  });
 
   //在最后一个ajax请求回来时,关闭进度条
   $(document).ajaxStop(function (){
@@ -52,5 +52,43 @@ $(function (){
     setTimeout(function (){
       NProgress.done();
     },500);
+  });
+
+
+$(function (){
+  //公共的功能实现
+  //1. 左侧二级菜单切换
+  $('.lt_aside .category').click(function (){
+    // alert(1);
+    $('.lt_aside .child').stop().slideToggle();
+  })
+
+  // 2. 点击切换侧边栏
+  $('.icon_menu').click(function (){
+    $('.lt_aside').toggleClass("hiddenmenu");
+    $('.lt_main').toggleClass("hiddenmenu");
+    $('.lt_topbar').toggleClass("hiddenmenu");
+  })
+
+  // 3. 点击退出菜单, 显示退出模态框 
+  $('.icon_logout').click(function (){
+    //显示模态框
+    $('#logoutModal').modal("show");
+  });
+
+  // 4. 点击退出按钮, 实现用户退出
+  $('#logoutBtn').click(function (){
+      // 退出需要发送ajax请求, 让服务器端退出, 销毁该用户的登陆状态
+    $.ajax({
+      type: "get",
+      url: "/employee/employeeLogout",
+      dataType: "json",
+      success: function (info){
+        if (info.success){
+          //退出成功,跳转到登录页
+          location.href = "login.html";
+        }
+      }
+    })
   })
 });
