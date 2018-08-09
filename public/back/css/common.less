@@ -73,10 +73,15 @@ a:active {
       a {
         height: 40px;
         line-height: 40px;
+        display: block;
         color: #fff;
         // font-size: 16px;
         padding-left: 40px;
         border-left: 3px solid transparent;
+        &.current {
+          background-color: #1D1F21;
+          border-left: 3px solid #006699;
+        }
       }
       .child {
         a {
@@ -129,6 +134,11 @@ a:active {
       height: 400px;
     }
   }
-
-  
+  .lt_content .table.table-bordered th, 
+  .lt_content .table.table-bordered td {
+    text-align: center;
+    /*表格垂直居中*/ 
+    vertical-align: middle;
+    /*属性不能设置给table*/ 
+  }
 }
