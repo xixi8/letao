@@ -116,7 +116,8 @@
 
   <!-- 添加商品模态框 -->
   <div class="modal fade" tabindex="-1" id="addModal">
-      <div class="modal-dialog modal-sm">
+    <!-- lg 大型 , 不配 中型, sm 小型 -->
+      <div class="modal-dialog">
         <div class="modal-content">
           <form id="form">
               <div class="modal-header">
@@ -127,7 +128,7 @@
                 <div class="form-group">
                     <div class="dropdown">
                       <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                        <span id="dropdownText">选择一级分类</span>
+                        <span id="dropdownText">选择二级分类</span>
                         <span class="caret"></span>
                       </button>
                       <ul class="dropdown-menu">
@@ -135,22 +136,51 @@
                       </ul>
                     </div>
 
-                    <input type="hidden" name="categoryId">
-                    <!-- 火热的品牌,写死值为1 -->
-                    <input type="hidden" name="hot" value="1">
+                    <input type="hidden" name="brandId">
+                    <!-- 产品上下架, 默认上架 1  -->
+                    <input type="hidden" name="statu" value="1">
                 </div>
+
+                <!-- 商品名称 -->
                 <div class="form-group">
-                  <input type="text" class="form-control" name="brandName"  placeholder="请输入二级分类">
+                  <input type="text" class="form-control" name="proName"  placeholder="请输入商品名称">
                 </div>
+
+                <!-- 商品描述 -->
+                <div class="form-group">
+                  <textarea name="proDesc" class="form-control" cols="30" rows="3" placeholder="请输入商品描述"></textarea>
+                </div>
+
+                <!-- 商品库存 -->
+                <div class="form-group">
+                  <input type="text" class="form-control" name="num"  placeholder="请输入商品库存">
+                </div>
+
+                <!-- 商品尺码 -->
+                <div class="form-group">
+                  <input type="text" class="form-control" name="size"  placeholder="请输入商品尺码">
+                </div>
+
+                <!-- 商品原价 -->
+                <div class="form-group">
+                  <input type="text" class="form-control" name="oldPrice"  placeholder="请输入商品原价">
+                </div>
+
+                <!-- 商品现价 -->
+                <div class="form-group">
+                  <input type="text" class="form-control" name="price"  placeholder="请输入商品现价">
+                </div>
+
                 <div class="form-group">
                   <label class="btn btn-default" for="fileupload">上传图片</label>
                   <!-- 指定 name 将来后台用于接收文件 -->
                   <!-- 指定 data-url ,指定后台接口地址 -->
-                  <input type="file" id="fileupload" name="pic1" data-url="/category/addSecondCategoryPic" style="display: none;">
+                  <!-- 多文件上传 multiple -->
+                  <input type="file" multiple id="fileupload" name="pic1" data-url="/product/addProductPic" style="display: none;">
                 </div>
                 <div class="form-group" id="imgBox">
-                  <img src="./images/none.png" width="100" alt="">
-                  <input type="hidden" name="brandLogo">
+                  <!-- picStatus 文件上传状态?  -->
+                  <input type="hidden" name="picStatus">
                 </div>
               </div>
               <div class="modal-footer">
@@ -184,11 +214,11 @@
   </script>
 
   <!-- 这里遍历的是一级分类的内容, 所以 v.id 就相当于 categoryId -->
-  <!-- <script type="text/html" id="dropdownTpl">
+  <script type="text/html" id="dropdownTpl">
     {{ each rows v i }}
-      <li><a href="#" data-id="{{ v.id }}">{{ v.categoryName }}</a></li>    
+      <li><a href="#" data-id="{{ v.id }}">{{ v.brandName }}</a></li>    
     {{ /each }}
-  </script> -->
+  </script>
 
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
