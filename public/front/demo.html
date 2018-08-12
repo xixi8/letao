@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    //专门通过传递的参数, 可以解析出地址栏的参数值
+
+    //1. 获取到地址栏后拼接的数据
+    // var search = location.search; //?name=%E5%B0%8F%E6%98%8E&age=18
+    // //2. 解码成中文
+    // search = decodeURI(search); //?name=小明&age=18
+    // //3. 截取,将 ? 去掉
+    // search = search.slice(1); //name=小明&age=18
+    // //4. 根据 & 进行切割
+    // var arr = search.split("&"); //["name=小明", "age=18"]
+
+    // //5. 对 arr 进行遍历, 返回一个对象
+    // //forEach (function (value, index))  方法,遍历数组  value就是当前元素
+    // var obj = {};
+    // arr.forEach(function (v, i){ //其中 v 就是每一项,["name=小明"]
+    //   //遍历每一项,将字符串分割成数组 split() 方法
+    //   var key = v.split("=")[0];
+    //   var value = v.split("=")[1];
+    //   obj[key] = value;
+
+    // });
+    // console.log(obj); //{name: "小明", age: "18"}
+
+    // 封装可以解析出地址栏信息的函数  通过传递的参数,可以解析出地址栏的参数值
+    function getSearch (name){
+      //1. 获取地址栏的信息
+      var search = location.search;
+      //2. 解码成中文
+      search = decodeURI(search);
+      //3. 将 ? 去掉
+      search = search.slice(1);
+      //4. 根据 & 进行切割
+      var arr = search.split("&");
+      //5. 遍历数组, 返回一个对象
+      var obj = {};
+      arr.forEach(function (v, i){
+        var key = v.split("=")[0];
+        var value = v.split("=")[1];
+        obj[key] = value;
+      });
+      return obj[name];
+    }
+
+    console.log( getSearch("name") );
+
+  </script>
+</body>
+</html>

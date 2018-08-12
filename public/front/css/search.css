@@ -1,0 +1,48 @@
+
+/* 搜索框 */
+.lt_search {
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.lt_search .search_input {
+  width: 100%;
+  height: 34px;
+  font-size: 12px;
+  border: 1px solid #007AFF;
+  border-radius: 5px;
+  /* overflow: hidden; */
+  margin-bottom: 0;
+}
+.lt_search .search_btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 0 5px 5px 0;
+}
+
+/* 历史记录 */
+.lt_history {
+  padding: 10px;
+}
+.lt_history .history_title {
+  height: 30px;
+  color: #666;
+  font-size: 12px;
+}
+.lt_history ul {
+  border: 1px dashed red;
+}
+.lt_history ul li {
+  border-bottom: 1px dashed red;
+  padding-left: 10px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+}
+.lt_history ul li:last-child {
+  border-bottom: none;
+}
+.btn_delete {
+  line-height: 30px;
+}
