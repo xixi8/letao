@@ -273,6 +273,7 @@ $(function() {
     paramsStr += "&picAddr2=" + picArr[1].picAddr + "&picName2=" + picArr[1].picName;
     paramsStr += "&picAddr3=" + picArr[2].picAddr + "&picName3=" + picArr[2].picName;
 
+    console.log(paramsStr);
     // 通过ajax提交
     $.ajax({
       type: "post",

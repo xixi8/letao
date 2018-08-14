@@ -151,10 +151,19 @@ img {
 }
 .lt_product_item .info {
   text-align: left;
+  /* 给p 设置高度 */
+  height: 40px;
 }
 .lt_product_item .price {
   color: red;
 }
 .lt_product_item .oldPrice {
   text-decoration: line-through;
+}
+
+/* 为了固定显示商品模块的高度, 需要固定img 的高度, 并且给 p 设置高度 */
+.lt_product_item img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
 }

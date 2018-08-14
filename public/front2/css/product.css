@@ -13,20 +13,7 @@
 }
 
 
-.lt_size span {
-  width: 25px;
-  height: 25px;
-  text-align: center;
-  line-height: 25px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  font-size: 12px;
-  margin: 3px 0;
-}
-.lt_size span.current {
-  background-color: orange;
-  color: #fff;
-}
+
 
 
 .lt_num span {

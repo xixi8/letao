@@ -89,8 +89,9 @@
     <ul>
       {{ each data v i }}
         <li class="lt_product_item">
-          <a href="#">
+          <a href="product.html?productId={{ v.id }}">
             <img src="{{ v.pic[0].picAddr }}" alt="">
+            <!-- mui 处理多行溢出: 添加类名 mui-ellipsis-2 保持两行 -->
             <p class="info mui-ellipsis-2">{{ v.proName }}</p>
             <p>
               <span class="price">¥{{ v.price }}</span>

@@ -1,0 +1,41 @@
+.item_box {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.lt_price .price {
+  color: red;
+}
+.lt_price .oldPrice {
+  font-size: 12px;
+  color: #666;
+  text-decoration: line-through;
+}
+.lt_size span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: 3px 0;
+  font-size: 12px;
+}
+.lt_size span.current {
+  background-color: orange;
+  color: #fff;
+}
+.lt_num span {
+  font-size: 12px;
+  color: #666;
+}
+
+/* 前往购物车 */
+.lt_go_cart {
+  border-top: 1px solid red;
+  padding: 10px;
+  background-color: #EFEFF4;
+}
+.lt_go_cart a {
+  padding: 5px;
+}
