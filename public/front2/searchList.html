@@ -48,7 +48,7 @@
         <!-- 产品区域 -->
         <div class="lt_product">
           <!-- 挖了个坑 -->
-          <div class="loading"></div>
+          <!--<div class="loading"></div>-->
 
         </div>
 
@@ -73,7 +73,7 @@
   <ul>
     {{ each data v i }}
       <li class="lt_product_item">
-        <a href="#">
+        <a href="product.html?productId={{ v.id }}">
           <img src="{{ v.pic[0].picAddr }}" alt="">
           <p class="info mui-ellipsis-2">{{ v.proName }}</p>
           <p>

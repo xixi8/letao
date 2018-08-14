@@ -102,7 +102,7 @@ $(function (){
     //需求: 1. 不要有重复项,如果有,移除前面的, 将最新的添加到数组中 (借用 indexOf 方法, 查找驻足中某个元素第一次出现的位置, 查不到 ==> -1)
           //2. 数组长度控制在 10 以内
     var index = arr.indexOf(key);
-    if ( index === -1){
+    if ( index > -1){
       //说明数组中 key 已经存在,移除
       arr.splice(index, 1);
     }

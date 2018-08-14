@@ -1,0 +1,44 @@
+
+/* 分类 */
+.lt_sort {
+  height: 30px;
+  background-color: #eee;
+}
+.lt_sort a {
+  float: left;
+  width: 25%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+
+/* current类名 */
+.lt_sort a.current {
+  color: #FF8C00;
+}
+
+/* loading */
+.lt_product {
+  position: relative;
+}
+.lt_product .loading {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid #006699;
+  /* 动画 */
+  animation: rotate 1s infinite ease-in-out;
+}
+@keyframes rotate {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
