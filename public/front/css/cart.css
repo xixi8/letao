@@ -1,0 +1,50 @@
+.cart_item {
+  height: 110px;
+  padding: 10px 15px;
+}
+.cart_img {
+  height: 90px;
+  width: 60px;
+}
+.cart_info {
+  height: 90px;
+  overflow: hidden;
+  padding: 0 10px;
+}
+.mui-table-cell {
+  display: block;
+}
+.cart_info .pro_name {
+  color: #000;
+}
+.cart_info .price {
+  color: red;
+}
+.cart_info .oldPrice {
+  text-decoration: line-through;
+}
+.lt_total {
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 12px;
+  color: red;
+  background-color: #eee;
+  position: absolute;
+  left: 0;
+  bottom: 55px;
+}
+.lt_total .mui-pull-right a {
+  padding: 0 15px;
+  background-color: red;
+  color: #fff;
+  display: block;
+}
+
+.lt_size {
+  text-align: left;
+}
+.lt_num {
+  text-align: left;
+}
